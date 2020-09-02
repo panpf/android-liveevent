@@ -3,7 +3,6 @@
 [![Platform][platform_android_icon]][platform_android_link]
 [![API][min_api_icon]][min_api_link]
 [![License][license_icon]][license_link]
-[![Status][status_icon]][license_link]
 
 This is an event distribution library on Android, with the following characteristics:
 * The source code is copied from LiveData 2.2.0 version, and the related code is modified to support subscription without receiving old messages, so there is no reflection
@@ -19,7 +18,7 @@ Add the following dependencies to your module `build.gradle` file ：
 implementation "com.github.panpf.liveevent:liveevent:$LAST_VERSION"
 ```
 
-Please replace `$LAST_VERSION` with the latest version: [![Download][version_java_icon]][version_java_link]
+Please replace `$LAST_VERSION` with the latest version: [![Download][version_icon]][version_link]
 
 Dependencies：
 * androidx.lifecycle:lifecycle-common: 2.2.0
@@ -104,14 +103,13 @@ Please view the [CHANGELOG.md] file
     See the License for the specific language governing permissions and
     limitations under the License.
 
-[status_icon]: https://img.shields.io/badge/Status-Developing-red
 [platform_android_icon]: https://img.shields.io/badge/Platform-Android-brightgreen.svg
 [platform_android_link]: https://android.com
 [min_api_icon]: https://img.shields.io/badge/API-16%2B-orange.svg
 [min_api_link]: https://developer.android.com/about/dashboards/
 [license_icon]: https://img.shields.io/badge/License-Apache%202-blue.svg
 [license_link]: https://www.apache.org/licenses/LICENSE-2.0
-[version_java_icon]: https://api.bintray.com/packages/panpf/maven/liveevent/images/download.svg
-[version_java_link]: https://bintray.com/panpf/maven/liveevent/_latestVersion
+[version_icon]: https://api.bintray.com/packages/panpf/maven/liveevent/images/download.svg
+[version_link]: https://bintray.com/panpf/maven/liveevent/_latestVersion
 
 [CHANGELOG.md]: CHANGELOG.md
