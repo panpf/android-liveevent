@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.github.panpf.liveevent.test">
+
+    <application>
+        <activity android:name=".NoDefaultValueLiveEventTest$TestActivity" />
+        <activity android:name=".DefaultValueLiveEventTest$TestActivity" />
+    </application>
+</manifest>
