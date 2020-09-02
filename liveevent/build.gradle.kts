@@ -40,7 +40,7 @@ Properties().apply { project.file("local.properties").takeIf { it.exists() }?.in
         artifactId = "liveevent"
         publishVersion = property("VERSION_NAME").toString()
         desc = "Android, Event, Live"
-        website = "https://github.com/panpf/liveevent"
+        website = "https://github.com/panpf/android-liveevent"
         userOrg = localProperties.getProperty("bintray.userOrg")
         bintrayUser = localProperties.getProperty("bintray.user")
         bintrayKey = localProperties.getProperty("bintray.apikey")
