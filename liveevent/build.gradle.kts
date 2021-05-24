@@ -1,6 +1,3 @@
-import com.novoda.gradle.release.PublishExtension
-import java.util.*
-
 plugins {
     id("com.android.library")
     id("kotlin-android")
@@ -32,17 +29,18 @@ dependencies {
     androidTestImplementation("androidx.fragment:fragment:${property("ANDROIDX_FRAGMENT")}")
 }
 
-Properties().apply { project.file("local.properties").takeIf { it.exists() }?.inputStream()?.use { load(it) } }.takeIf { !it.isEmpty }?.let { localProperties ->
-    apply { plugin("com.novoda.bintray-release") }
+/**
+ * publish config, The following properties are generally configured in the ~/.gradle/gradle.properties file
+ */
+if (hasProperty("signing.keyId")
+    && hasProperty("signing.password")
+    && hasProperty("signing.secretKeyRingFile")
+    && hasProperty("mavenCentralUsername")
+    && hasProperty("mavenCentralPassword")
+) {
+    apply { plugin("com.vanniktech.maven.publish") }
 
-    configure<PublishExtension> {
-        groupId = "com.github.panpf.liveevent"
-        artifactId = "liveevent"
-        publishVersion = property("VERSION_NAME").toString()
-        desc = "Android, Event, Live"
-        website = "https://github.com/panpf/android-liveevent"
-        userOrg = localProperties.getProperty("bintray.userOrg")
-        bintrayUser = localProperties.getProperty("bintray.user")
-        bintrayKey = localProperties.getProperty("bintray.apikey")
+    configure<com.vanniktech.maven.publish.MavenPublishPluginExtension> {
+        sonatypeHost = com.vanniktech.maven.publish.SonatypeHost.S01
     }
 }

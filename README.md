@@ -2,6 +2,7 @@
 
 [![Platform][platform_android_icon]][platform_android_link]
 [![API][min_api_icon]][min_api_link]
+[![Download][version_icon]][version_link]
 [![License][license_icon]][license_link]
 
 This is an event distribution library on Android, with the following characteristics:
@@ -10,15 +11,13 @@ This is an event distribution library on Android, with the following characteris
 
 ## Getting Started
 
-This library has been published to `jcenter` and private repositories `https://dl.bintray.com/panpf/maven/`, you can freely choose where to download it
-
-Add the following dependencies to your module `build.gradle` file ：
+This library has been published to `mavenCentral`. Add the following dependencies to your module `build.gradle` file: 
 
 ```grovvy
-implementation "com.github.panpf.liveevent:liveevent:$LAST_VERSION"
+implementation "io.github.panpf.liveevent:liveevent:${LAST_VERSION}"
 ```
 
-Please replace `$LAST_VERSION` with the latest version: [![Download][version_icon]][version_link]
+`${LAST_VERSION}`: [![Download][version_icon]][version_link] (No include 'v')
 
 Dependencies：
 * androidx.lifecycle:lifecycle-common: 2.2.0
@@ -109,7 +108,7 @@ Please view the [CHANGELOG.md] file
 [min_api_link]: https://developer.android.com/about/dashboards/
 [license_icon]: https://img.shields.io/badge/License-Apache%202-blue.svg
 [license_link]: https://www.apache.org/licenses/LICENSE-2.0
-[version_icon]: https://api.bintray.com/packages/panpf/maven/liveevent/images/download.svg
-[version_link]: https://bintray.com/panpf/maven/liveevent/_latestVersion
+[version_icon]: https://img.shields.io/maven-central/v/io.github.panpf.liveevent/liveevent
+[version_link]: https://repo1.maven.org/maven2/io/github/panpf/liveevent/
 
 [CHANGELOG.md]: CHANGELOG.md
